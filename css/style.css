@@ -1,0 +1,184 @@
+/* navigation css */
+
+.navbar-header {
+    height: 75px;
+    background-color: #000;
+}
+
+.navbar {
+    margin: 0px;
+    border: 0px;
+    background-color: #000;
+}
+
+.navbar-brand {
+    padding: 9px;
+}
+
+.navbar-right {
+    padding: 12px;
+}
+
+.navbar-toggle{
+    padding: 16px;
+}
+
+nav li,
+nav a {
+    font-size: 18px;
+}
+
+/*.active {
+    color: aqua;
+}
+
+/*.featured-plate {
+    display: inline-block;
+    padding: 10px;
+    background-color: beige;
+    margin-bottom: 3px;
+}*/
+
+.featured-plate {
+    display: inline-block;
+}
+
+.featured-plate img {
+    padding: 2px;
+    outline: 0.5px solid #fff;
+    outline-offset: -7px;
+}
+
+.featured-plate:hover {
+    opacity: 0.5;
+}
+
+.two-left,
+.two-right {
+    height: 500px;
+    position: table;
+    border: 0px solid red;
+}
+
+#our-story {
+    display: relative;
+}
+
+#our-story h3 {
+    display: absolute;
+    padding-top: 18%;
+    margin: auto;
+    font-size: 40px;
+    border: 0px solid green;
+}
+
+#our-story p {
+    display: absolute;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: auto;
+    font-size: 26px;
+    border: 0px solid green;
+}
+
+#our-story-pic {
+    line-height: 500px;
+}
+
+#our-story-pic img {
+    vertical-align: middle;
+    width: 100%;
+    margin: auto;
+    outline: 1px solid #fff;
+    outline-offset: -7px;
+}
+
+#our-story-pic:hover {
+    opacity: 0.7;
+}
+
+hr {
+    width: 60px;
+    border-color: yellow;
+    border-width: 5px;
+    margin-left: 0px;
+}
+
+.btn-about a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-about {
+    font-size: 20px;
+    width: 170px;
+    height: 50px;
+    border: 0px solid #fff;
+    outline: 1px solid #fff;
+    outline-offset: -7px;
+    background-color: black;
+}
+
+.btn-about:hover {
+    background-color: aqua;
+}
+
+
+footer {
+    background-color: darkgray;
+    height: 370px;
+}
+
+#copywrite {
+    background-color: black;
+    color: white;
+    height: 30px;
+    text-align: center;
+}
+
+#copywrite p {
+    padding-top: 5px;
+}
+
+/* aboutUs page css */
+#about-us {
+    display: relative;
+}
+#about-us-p{
+    display: absolute;
+    padding-top: 10%;
+}
+
+#about-us p {
+    display: absolute;
+    padding-top: 3%;
+    margin: auto;
+    font-size: 18px;
+    border: 0px solid green;
+}
+
+/* contact page css */
+
+#contact-info h2 {
+    position: relative;
+}
+
+#contact-info p {
+    font-size: 18px;
+    
+}
+
+#contact-hours {
+    position: absolute;
+    display: inline-block;
+}
+
+#contact-map {
+    line-height: 500px;
+}
+
+#contact-map iframe {
+    vertical-align: middle;
+    width: 100%;
+    margin: auto;
+}
