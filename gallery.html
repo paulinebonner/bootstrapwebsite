@@ -33,14 +33,19 @@
         </div>
     </nav>
 
-	<div id="container">
-		<div class="plat">
-			<h6>Furniture</h6>
-			<img src="http://media.cymaxstores.com/Images/5/436110-SM2.jpg">
-			<p>Bush Somerset Collection Bookcase</p>
-			<h5>$261.96</h5>
-		</div>
-	</div>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="col-md-2">
+                <button class="button" id="chicken">chicken</button>
+                <button class="button" id="beef">beef</button>
+                <button class="button" id="pork">pork</button>
+                <button class="button" id="vegtable">vegetable</button>
+                <button class="button" id="all">all</button>
+            </div>
+            <div class="row col-md-10" id="dishes"></div>
+        </div>
+    </div>
+
 
     <footer>
         <div class="container three">
@@ -89,104 +94,102 @@
 
     <!--Custom script here-->
     <script>
-    plates = [
-			{
-				"id": 1,
-				"category": "Chicken",
-				"product": "Chicken Dish One",
-				"price": 12.00,
-				"image": "img/gallery-sm-1.jpeg"
-			},
-			{
-				"id": 2,
-				"category": "Vegetarian",
-				"product": "Vegetarian Dish One",
-				"price": 9.00,
-				"image": "img/gallery-sm-2.jpeg"
-			},
-			{
-				"id": 3,
-				"category": "Chicken",
-				"product": "Chicken Dish 2",
-				"price": 14.00,
-				"image": "img/gallery-sm-3.jpeg"
-			},
-			{
-				"id": 4,
-				"category": "Beef",
-				"product": "Beef Dish One",
-				"price": 15.00,
-				"image": "img/gallery-sm-4.jpeg"
-			},
-			{
-				"id": 5,
-				"category": "Beef",
-				"product": "Beef Dish Two",
-				"price": 14.00,
-				"image": "img/gallery-sm-5.jpeg"
-			},
-			{
-				"id": 6,
-				"category": "Chicken",
-				"product": "Chicken Dish Three",
-				"price": 13.00,
-				"image": "img/gallery-sm-6.jpeg"
-			},
-			{
-				"id": 7,
-				"category": "Pork",
-				"product": "Pork Dish One",
-				"price": 11.00,
-				"image": "img/gallery-sm-7.jpeg"
-			},
-			{
-				"id": 8,
-				"category": "Pork",
-				"product": "Pork Dish Two",
-				"price": 13.00,
-				"image": "img/gallery-sm-8.jpeg"
-			},
-			{
-				"id": 9,
-				"category": "Pork",
-				"product": "Dish Three",
-				"price": 11.00,
-				"image": "img/gallery-sm-9.jpeg"
-			},
-			{
-				"id": 10,
-				"category": "Vegetarian",
-				"product": "Vegeratian Dish Two",
-				"price": 11.00,
-				"image": "img/gallery-sm-10.jpeg"
-			},
-			{
-				"id": 11,
-				"category": "Beef",
-				"product": "Beef Dish Three",
-				"price": 12.00,
-				"image": "img/gallery-sm-11.jpeg"
-			},
-			{
-				"id": 12,
-				"category": "Seafood",
-				"product": "Seafood Dish One",
-				"price": 12.00,
-				"image": "img/gallery-sm-12.jpeg"
-			}
-		];
-        
-		for (i in plates){
-			document.getElementById("container").innerHTML += '<div class="plat"></div>';
-			console.log(document.getElementsByClassName('plat'));
-			document.getElementsByClassName('plat')[i].innerHTML =`
+        plates = [{
+                "id": 1,
+                "category": "Chicken",
+                "product": "Chicken Dish One",
+                "price": 12.00,
+                "image": "img/gallery-sm-1.jpeg"
+            },
+            {
+                "id": 2,
+                "category": "Vegetarian",
+                "product": "Vegetarian Dish One",
+                "price": 9.00,
+                "image": "img/gallery-sm-2.jpeg"
+            },
+            {
+                "id": 3,
+                "category": "Chicken",
+                "product": "Chicken Dish 2",
+                "price": 14.00,
+                "image": "img/gallery-sm-3.jpeg"
+            },
+            {
+                "id": 4,
+                "category": "Beef",
+                "product": "Beef Dish One",
+                "price": 15.00,
+                "image": "img/gallery-sm-4.jpeg"
+            },
+            {
+                "id": 5,
+                "category": "Beef",
+                "product": "Beef Dish Two",
+                "price": 14.00,
+                "image": "img/gallery-sm-5.jpeg"
+            },
+            {
+                "id": 6,
+                "category": "Chicken",
+                "product": "Chicken Dish Three",
+                "price": 13.00,
+                "image": "img/gallery-sm-6.jpeg"
+            },
+            {
+                "id": 7,
+                "category": "Pork",
+                "product": "Pork Dish One",
+                "price": 11.00,
+                "image": "img/gallery-sm-7.jpeg"
+            },
+            {
+                "id": 8,
+                "category": "Pork",
+                "product": "Pork Dish Two",
+                "price": 13.00,
+                "image": "img/gallery-sm-8.jpeg"
+            },
+            {
+                "id": 9,
+                "category": "Pork",
+                "product": "Dish Three",
+                "price": 11.00,
+                "image": "img/gallery-sm-9.jpeg"
+            },
+            {
+                "id": 10,
+                "category": "Vegetarian",
+                "product": "Vegeratian Dish Two",
+                "price": 11.00,
+                "image": "img/gallery-sm-10.jpeg"
+            },
+            {
+                "id": 11,
+                "category": "Beef",
+                "product": "Beef Dish Three",
+                "price": 12.00,
+                "image": "img/gallery-sm-11.jpeg"
+            },
+            {
+                "id": 12,
+                "category": "Seafood",
+                "product": "Seafood Dish One",
+                "price": 12.00,
+                "image": "img/gallery-sm-12.jpeg"
+            }
+        ];
+    
+        for (i in plates) {
+            document.getElementById("dishes").innerHTML += '<div class="plat col-md-4"></div>';
+            document.getElementsByClassName('plat')[i].innerHTML = `
 				<h6>${plates[i].category}</h6>
 				<img src="${plates[i].image}">
 				<p>${plates[i].product}</p>
 				<h5>$${plates[i].price}</h5>
 			`;
-		};
-    
+        };
+
     </script>
 </body>
 

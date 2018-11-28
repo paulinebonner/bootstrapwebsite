@@ -28,6 +28,10 @@ nav a {
     font-size: 18px;
 }
 
+.carousel-inner img {
+    width: 100%;
+}
+
 /*.active {
     color: aqua;
 }
