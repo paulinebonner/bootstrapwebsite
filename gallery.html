@@ -223,6 +223,20 @@
             }
         };*/
         
+        
+                function sort() {
+                    for (i in plates) {
+                        if (document.getElementsByClassName("gallery-button")[i].innerHTML == plates[i].category) {
+                            document.getElementById("dishes").innerHTML += '<div class="plat col-md-4"></div>';
+                            document.getElementsByClassName('plat')[i].innerHTML = `
+                            <img src="${plates[i].image}">
+                            <h4>${plates[i].product}</h4>
+                            <h4 id="price">$${plates[i].price}</h4>
+                            `;
+                        }
+                    }
+                };
+        
     </script>
 </body>
 
