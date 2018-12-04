@@ -29,18 +29,19 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li class="active"><a href=" http://places.singleplatform.com/himalayan-yak/menu" target="_blank">Menu</a></li>
-            </ul>
+            </ul>ß
         </div>
     </nav>
 
     <div class="container" id="container">
         <div class="row">
             <div class="col-md-2">
-                <button class="gallery-button" id="chicken">chicken</button>
-                <button class="gallery-button" id="beef">beef</button>
-                <button class="gallery-button" id="pork">pork</button>
-                <button class="gallery-button" id="vegtable">vegetable</button>
-                <button class="gallery-button" id="all">all</button>
+                <button class="gallery-button" id="chicken" onclick="sort()">chicken</button>
+                <button class="gallery-button" id="beef" onclick="sort()">beef</button>
+                <button class="gallery-button" id="pork" onclick="sort()">pork</button>
+                <button class="gallery-button" id="seafood" onclick="sort()">seafood</button>
+                <button class="gallery-button" id="vegtable" onclick="sort()">vegetable</button>
+                <button class="gallery-button" id="all" onclick="sort()">all</button>
             </div>
             <div class="row col-md-10" id="dishes"></div>
         </div>
@@ -111,7 +112,7 @@
             {
                 "id": 3,
                 "category": "Chicken",
-                "product": "Chicken Dish 2",
+                "product": "Chicken Dish Two",
                 "price": 14.00,
                 "image": "img/gallery-sm-3.jpeg"
             },
@@ -183,11 +184,45 @@
         for (i in plates) {
             document.getElementById("dishes").innerHTML += '<div class="plat col-md-4"></div>';
             document.getElementsByClassName('plat')[i].innerHTML = `
-				<img src="${plates[i].image}">
-				<h4>${plates[i].product}</h4>
-				<h4 id="price">$${plates[i].price}</h4>
-			`;
+        				<img src="${plates[i].image}">
+        				<h4>${plates[i].product}</h4>
+        				<h4 id="price">$${plates[i].price}</h4>
+        			`;
         };
+
+        /*        function sort() {
+                    for (i in plates) {
+                        if (document.getElementsById("chicken").innerHTML == "chicken") {
+                            document.getElementById("dishes").innerHTML += '<div class="plat col-md-4"></div>';
+                            document.getElementsByClassName('plat')[i].innerHTML = `
+                            <img src="${plates[i].image}">
+                            <h4>${plates[i].product}</h4>
+                            <h4 id="price">$${plates[i].price}</h4>
+                            `;
+                        }
+                    }
+                };*/
+
+/*        var buttonChicken = document.getElementsById("chicken").innerHTML;
+        var buttonBeef = document.getElementsById("beef").innerHTML;
+        var buttonPork = document.getElementsById("pork").innerHTML;
+        var buttonSeafood = document.getElementsById("seafood").innerHTML;
+        var buttonVegetable = document.getElementsById("vegetable").innerHTML;
+        var buttonAll = document.getElementsById("all").innerHTML;
+
+        document.getElementById("dishes").innerHTML = "";
+
+        for (var i = 0; i < plates.length; i++) {
+            if (.gallery-button == buttonChicken) {
+                document.getElementById("dishes").innerHTML += '<div class="items col-md-4"></div>';
+                document.getElementsByClassName('items')[i].innerHTML = ` 
+                        <img src="${plates[i].image}">
+                        <h4>${plates[i].product}</h4>
+                        <h4 id="price">$${plates[i].price}</h4>
+                        `;
+            }
+        };*/
+        
     </script>
 </body>
 
